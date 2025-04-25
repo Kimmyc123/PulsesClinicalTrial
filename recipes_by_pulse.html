@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes by Pulse</title>
+    <style>
+        :root {
+            --ua-blue: #003366;
+            --ua-red: #CC0033;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--white);
+        }
+
+        .header {
+            background-color: var(--ua-blue);
+            color: var(--white);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .hamburger {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 10px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            margin: 6px 0;
+            background-color: var(--white);
+            transition: 0.4s;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: var(--ua-blue);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 99;
+        }
+
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 1.2em;
+            color: var(--white);
+            display: block;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .sidebar a:hover {
+            background-color: var(--ua-red);
+        }
+
+        .content {
+            padding: 20px;
+            transition: margin-right 0.5s;
+        }
+
+        .page-section {
+            display: none;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .image-container {
+            width: 100%;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .section-title {
+            color: var(--ua-blue);
+            margin: 20px 0;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        @media screen and (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Recipes by Pulse</h1>
+        <button class="hamburger" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <div id="mySidebar" class="sidebar">
+        <a onclick="showPage('home')">Home</a>
+        <a onclick="showPage('yellow-lentils')">Yellow Lentils</a>
+        <a onclick="showPage('black-beans')">Black Beans</a>
+        <a onclick="showPage('white-beans')">White Beans</a>
+        <a onclick="showPage('chickpeas')">Chickpeas</a>
+        <a onclick="showPage('red-lentils')">Red Lentils</a>
+        <a onclick="showPage('kidney-beans')">Kidney Beans</a>
+        <a onclick="showPage('about')">About the Author</a>
+    </div>
+
+    <div class="content">
+        <!-- Home Section -->
+        <section id="home" class="page-section active">
+            <h2 class="section-title">Welcome to Recipes by Pulse</h2>
+            <div class="image-grid">
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="Recipe 1">
+                </div>
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="Recipe 2">
+                </div>
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="Recipe 3">
+                </div>
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="Recipe 4">
+                </div>
+            </div>
+        </section>
+
+        <!-- Yellow Lentils Section -->
+        <section id="yellow-lentils" class="page-section">
+            <h2 class="section-title">Yellow Lentils Recipes</h2>
+            <div class="image-grid">
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="Yellow Lentils Recipe 1">
+                </div>
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="Yellow Lentils Recipe 2">
+                </div>
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="Yellow Lentils Recipe 3">
+                </div>
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="Yellow Lentils Recipe 4">
+                </div>
+            </div>
+        </section>
+
+        <!-- Black Beans Section -->
+        <section id="black-beans" class="page-section">
+            <h2 class="section-title">Black Beans Recipes</h2>
+            <div class="image-grid">
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="Black Beans Recipe 1">
+                </div>
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="Black Beans Recipe 2">
+                </div>
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="Black Beans Recipe 3">
+                </div>
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="Black Beans Recipe 4">
+                </div>
+            </div>
+        </section>
+
+        <!-- White Beans Section -->
+        <section id="white-beans" class="page-section">
+            <h2 class="section-title">White Beans Recipes</h2>
+            <div class="image-grid">
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="White Beans Recipe 1">
+                </div>
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="White Beans Recipe 2">
+                </div>
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="White Beans Recipe 3">
+                </div>
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="White Beans Recipe 4">
+                </div>
+            </div>
+        </section>
+
+        <!-- Chickpeas Section -->
+        <section id="chickpeas" class="page-section">
+            <h2 class="section-title">Chickpeas Recipes</h2>
+            <div class="image-grid">
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="Chickpeas Recipe 1">
+                </div>
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="Chickpeas Recipe 2">
+                </div>
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="Chickpeas Recipe 3">
+                </div>
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="Chickpeas Recipe 4">
+                </div>
+            </div>
+        </section>
+
+        <!-- Red Lentils Section -->
+        <section id="red-lentils" class="page-section">
+            <h2 class="section-title">Red Lentils Recipes</h2>
+            <div class="image-grid">
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="Red Lentils Recipe 1">
+                </div>
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="Red Lentils Recipe 2">
+                </div>
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="Red Lentils Recipe 3">
+                </div>
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="Red Lentils Recipe 4">
+                </div>
+            </div>
+        </section>
+
+        <!-- Kidney Beans Section -->
+        <section id="kidney-beans" class="page-section">
+            <h2 class="section-title">Kidney Beans Recipes</h2>
+            <div class="image-grid">
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="Kidney Beans Recipe 1">
+                </div>
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="Kidney Beans Recipe 2">
+                </div>
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="Kidney Beans Recipe 3">
+                </div>
+                <div class="image-container">
+                    <img src="https://placehold.co/800x450" alt="Kidney Beans Recipe 4">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="page-section">
+            <h2 class="section-title">About the Author</h2>
+            <div style="padding: 20px; text-align: center;">
+                <p>Add your author biography and information here.</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function toggleNav() {
+            const sidebar = document.getElementById("mySidebar");
+            const currentWidth = sidebar.style.width;
+            
+            if (currentWidth === "250px") {
+                sidebar.style.width = "0";
+            } else {
+                sidebar.style.width = "250px";
+            }
+        }
+
+        function showPage(pageId) {
+            // Hide all sections
+            const sections = document.getElementsByClassName('page-section');
+            for (let section of sections) {
+                section.classList.remove('active');
+            }
+            
+            // Show selected section
+            document.getElementById(pageId).classList.add('active');
+            
+            // Close sidebar on mobile
+            if (window.innerWidth <= 768) {
+                toggleNav();
+            }
+        }
+    </script>
+</body>
+</html>
