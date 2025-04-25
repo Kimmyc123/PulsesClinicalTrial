@@ -1,0 +1,702 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Pulses Study Website</title>  
+    <style>  
+        body {
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://i.imgur.com/9Lqlf2a.png') no-repeat center center fixed;
+            background-size: cover;
+}  
+        .nav {  
+            background: #e7d3c2;  
+            padding: 20px 0;  
+            text-align: center;  
+        }  
+        .nav a {  
+            color: #7c5c3e;  
+            text-decoration: none;  
+            margin: 0 20px;  
+            font-weight: bold;  
+            font-size: 18px;  
+            transition: border-bottom 0.2s;  
+        }  
+        .nav a.active {  
+            border-bottom: 3px solid #bfa07a;  
+        }  
+        .container {  
+            max-width: 900px;  
+            margin: 40px auto;  
+            background: #fff8f1;  
+            border-radius: 16px;  
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);  
+            padding: 40px;  
+        }  
+        .slides-placeholder {  
+            border: 2px dashed #bfa07a;  
+            border-radius: 8px;  
+            padding: 30px;  
+            text-align: center;  
+            color: #bfa07a;  
+            margin-bottom: 40px;  
+            font-size: 22px;  
+        }  
+        .images-row {  
+            display: flex;  
+            gap: 20px;  
+            justify-content: center;  
+        }  
+        .image-placeholder {  
+            width: 150px;  
+            height: 120px;  
+            background: #f5e6da;  
+            border: 2px dashed #e7d3c2;  
+            border-radius: 8px;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            color: #bfa07a;  
+            font-size: 16px;  
+        }  
+    </style>  
+</head>  
+<body>  
+<!-- University of Arizona Header Banner with Centered Title and About Button -->  
+<div style="background: linear-gradient(to right, #003366 60%, #CC0033 100%); color: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.07); display: flex; align-items: center; justify-content: center; padding: 28px 0 18px 0; position: relative;">  
+    <!-- Invisible spacer for symmetry -->  
+    <span style="width: 180px; display: inline-block;"></span>  
+    <!-- Centered title -->  
+    <span style="font-size: 2.5rem; font-weight: bold; letter-spacing: 1px; text-shadow: 1px 1px 6px rgba(0,0,0,0.10); font-family: Arial, sans-serif; flex: 1; text-align: center;">  
+    Pulses Clinical Trial: Pulse Powered Plates   
+    </span>  
+</div>  
+</div>  
+    <style>  
+    .nav {  
+        background: white;  
+        padding: 20px 0;  
+        text-align: center;  
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);  
+        margin-bottom: 30px;  
+    }  
+  
+    .nav-container {  
+        max-width: 1200px;  
+        margin: 0 auto;  
+        display: flex;  
+        justify-content: center;  
+        flex-wrap: wrap;  
+        gap: 8px;  
+    }  
+  
+    .nav a {  
+        color: #666;  
+        text-decoration: none;  
+        padding: 10px 20px;  
+        margin: 0 5px;  
+        font-weight: 500;  
+        font-size: 16px;  
+        border-radius: 6px;  
+        transition: all 0.2s ease;  
+    }  
+  
+    .nav a:hover {  
+        background: #f5f5f5;  
+        color: #003366;  
+    }  
+  
+    .nav a.active {  
+        background: #003366;  
+        color: white;  
+    }  
+  
+    .about-link {  
+        background: #CC0033 !important;  
+        color: white !important;  
+        margin-left: 20px !important;  
+    }  
+  
+    .about-link:hover {  
+        background: #b30000 !important;  
+        opacity: 0.95;  
+    }  
+  
+    @media (max-width: 768px) {  
+        .nav {  
+            padding: 15px 10px;  
+        }  
+          
+        .nav a {  
+            padding: 8px 15px;  
+            font-size: 15px;  
+        }  
+          
+        .about-link {  
+            margin-left: 0 !important;  
+            margin-top: 10px;  
+        }  
+    }  
+</style>  
+  
+<div class="nav">  
+    <div class="nav-container">  
+        <a href="#" class="nav-link" data-week="about">About</a> 
+        <a href="#" class="nav-link" data-week="1">Week 1: Yellow Lentils</a>  
+        <a href="#" class="nav-link" data-week="2">Week 2: Black Beans</a>  
+        <a href="#" class="nav-link" data-week="3">Week 3: White Beans</a>  
+        <a href="#" class="nav-link" data-week="4">Week 4: Chickpeas</a>  
+        <a href="#" class="nav-link" data-week="5">Week 5: Red Lentils</a>  
+        <a href="#" class="nav-link" data-week="6">Week 6: Kidney Beans</a>  
+        <a href="#" class="nav-link" data-week="researchers">About the Researchers</a>   
+    </div>  
+</div>  
+        
+    </div>  
+    
+  
+    <!-- Week Content Sections -->  
+    <div class="week-content" id="week-1" style="display: none;">  
+        <div class="container">  
+    
+<style>  
+    .week-title {  
+        text-align: center;  
+        color: #7c5c3e;  /* Warm brown color to match theme */  
+        font-size: 36px;  /* Larger font size */  
+        margin: 30px 0;  /* Space above and below */  
+        font-weight: bold;  
+        padding-bottom: 15px;  /* Space before underline */  
+        border-bottom: 2px solid #e7d3c2;  /* Subtle underline */  
+        width: fit-content;  /* Makes border only as wide as text */  
+        margin-left: auto;  /* Centers the element */  
+        margin-right: auto;  /* Centers the element */  
+    }  
+</style>  
+  
+<h1 class="week-title">Week 1: Yellow Lentils</h1>  
+    <!-- Embedded PowerPoint presentation -->  
+    <div class="slides-placeholder" style="padding:0; border:none; background:none;">  
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ1-QihoojO47FYjrYsyfIyszCYCGmZiZHL6kR4hxZzvkMcDz2oA7HBfUJOB2j9Qw/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div>  
+    <style>  
+    .images-row {  
+        display: flex;  
+        justify-content: center;  
+        gap: 30px;  
+        padding: 20px;  
+        flex-wrap: wrap;  
+    }  
+      
+    .image-placeholder {  
+        width: 400px;  /* Increased from default size */  
+        height: auto;  /* Maintains aspect ratio */  
+        border-radius: 10px;  /* Rounded corners */  
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* Subtle shadow */  
+        transition: transform 0.3s ease;  /* Smooth hover effect */  
+    }  
+      
+    .image-placeholder:hover {  
+        transform: scale(1.05);  /* Slight zoom on hover */  
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);  
+    }  
+</style>  
+  
+<div class="images-row">  
+    <img src="https://i.imgur.com/UYUiLh1.png"   
+         alt="Image 1"   
+         class="image-placeholder">  
+    <img src="https://i.imgur.com/QuTo6tI.jpeg"   
+         alt="Image 2"   
+         class="image-placeholder"> 
+    <img src="https://i.imgur.com/Hw0b4fU.jpeg"   
+         alt="Image 2"   
+         class="image-placeholder">   
+    <img src="https://i.imgur.com/wVz8uBS.jpeg"   
+         alt="Image 2"   
+         class="image-placeholder">   
+</div>    
+    </div>  
+    </div>    
+    </div>  
+        </div>  
+    </div>  
+    
+    <div class="week-content" id="week-2" style="display: none;">  
+        <div class="container"> 
+             
+            <style>  
+    .week-title {  
+        text-align: center;  
+        color: #7c5c3e;  /* Warm brown color */  
+        font-size: 36px;  
+        margin: 30px 0;  
+        font-weight: bold;  
+        padding-bottom: 15px;  
+        border-bottom: 2px solid #e7d3c2;  
+        width: fit-content;  
+        margin-left: auto;  
+        margin-right: auto;  
+    }  
+</style>  
+  
+<h1 class="week-title">Week 2: Black Beans</h1>  
+            <!-- Embedded PowerPoint presentation -->  
+    <div class="slides-placeholder" style="padding:0; border:none; background:none;">  
+   <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTGvi5JNiy04FzUjnJTnvyWOXuiBbl0WVpls9AX556j84xf5q6saZtZwMMPO_a0wQ/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="640" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>  
+    <style>  
+    .images-row {  
+        display: flex;  
+        justify-content: center;  
+        gap: 30px;  
+        padding: 20px;  
+        flex-wrap: wrap;  
+    }  
+      
+    .image-placeholder {  
+        width: 400px;  /* Increased from default size */  
+        height: auto;  /* Maintains aspect ratio */  
+        border-radius: 10px;  /* Rounded corners */  
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* Subtle shadow */  
+        transition: transform 0.3s ease;  /* Smooth hover effect */  
+    }  
+      
+    .image-placeholder:hover {  
+        transform: scale(1.05);  /* Slight zoom on hover */  
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);  
+    }  
+</style>  
+  
+<div class="images-row">  
+    <img src="https://i.imgur.com/hqhjRS4.png"   
+         alt="Image 1"   
+         class="image-placeholder">  
+    <img src="https://i.imgur.com/eSlthLy.png"   
+         alt="Image 2"   
+         class="image-placeholder">  
+     <img src="https://i.imgur.com/DnMNa4W.jpeg"   
+         alt="Image 2"   
+         class="image-placeholder">  
+     <img src="https://i.imgur.com/QTx6q49.jpeg"   
+         alt="Image 2"   
+         class="image-placeholder">  
+</div>    
+    </div>  
+        </div>
+          
+    </div>  
+    <div class="week-content" id="week-3" style="display: none;">  
+        <div class="container">  
+          <style>  
+    .week-title {  
+        text-align: center;  
+        color: #7c5c3e;  /* Warm brown color */  
+        font-size: 36px;  
+        margin: 30px 0;  
+        font-weight: bold;  
+        padding-bottom: 15px;  
+        border-bottom: 2px solid #e7d3c2;  
+        width: fit-content;  
+        margin-left: auto;  
+        margin-right: auto;  
+    }  
+</style>  
+  
+<h1 class="week-title">Week 3: White Beans</h1>  
+             <!-- Embedded PowerPoint presentation -->  
+    <div class="slides-placeholder" style="padding:0; border:none; background:none;">  
+    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTTm1EmboIiQ6rXAJBDHcWRLIhNe-5qkM3xc_o6VOFQDN8Fu4sZMLfmabvMVifReQ/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>  
+    <style>  
+    .images-row {  
+        display: flex;  
+        justify-content: center;  
+        gap: 30px;  
+        padding: 20px;  
+        flex-wrap: wrap;  
+    }  
+      
+    .image-placeholder {  
+        width: 400px;  /* Increased from default size */  
+        height: auto;  /* Maintains aspect ratio */  
+        border-radius: 10px;  /* Rounded corners */  
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* Subtle shadow */  
+        transition: transform 0.3s ease;  /* Smooth hover effect */  
+    }  
+      
+    .image-placeholder:hover {  
+        transform: scale(1.05);  /* Slight zoom on hover */  
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);  
+    }  
+</style>  
+  
+<div class="images-row">  
+    <img src="https://i.imgur.com/SAlI8Qt.jpeg"   
+         alt="Image 1"   
+         class="image-placeholder">  
+    <img src="https://i.imgur.com/IgmzwAA.jpeg"   
+         alt="Image 2"   
+         class="image-placeholder">  
+    <img src="https://i.imgur.com/X0scAYw.jpeg"   
+         alt="Image 3"   
+         class="image-placeholder"> 
+    <img src="https://i.imgur.com/RJO3F5n.jpeg"   
+         alt="Image 4"   
+         class="image-placeholder"> 
+</div>    
+        </div>
+          
+    </div>  
+    <div class="week-content" id="week-4" style="display: none;">  
+        <div class="container">  
+            <style>  
+    .week-title {  
+        text-align: center;  
+        color: #7c5c3e;  /* Warm brown color */  
+        font-size: 36px;  
+        margin: 30px 0;  
+        font-weight: bold;  
+        padding-bottom: 15px;  
+        border-bottom: 2px solid #e7d3c2;  
+        width: fit-content;  
+        margin-left: auto;  
+        margin-right: auto;  
+    }  
+</style>  
+  
+<h1 class="week-title">Week 4: Chickpeas</h1>   
+            <!-- Embedded PowerPoint presentation -->  
+    <div class="slides-placeholder" style="padding:0; border:none; background:none;">  
+   <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQrYQDjJCwn7M4OlfE4DnBZhuldeZ6-Sc-EnUZf9vlMD91zqy5UzjF0wdTyIn92ig/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="640" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>  
+    <style>  
+    .images-row {  
+        display: flex;  
+        justify-content: center;  
+        gap: 30px;  
+        padding: 20px;  
+        flex-wrap: wrap;  
+    }  
+      
+    .image-placeholder {  
+        width: 400px;  /* Increased from default size */  
+        height: auto;  /* Maintains aspect ratio */  
+        border-radius: 10px;  /* Rounded corners */  
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* Subtle shadow */  
+        transition: transform 0.3s ease;  /* Smooth hover effect */  
+    }  
+      
+    .image-placeholder:hover {  
+        transform: scale(1.05);  /* Slight zoom on hover */  
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);  
+    }  
+</style>  
+  
+<div class="images-row">  
+    <img src="https://i.imgur.com/pFXPCVb.jpeg"   
+         alt="Image 1"   
+         class="image-placeholder">  
+    <img src="https://i.imgur.com/jWX21Al.jpeg"   
+         alt="Image 2"   
+         class="image-placeholder">  
+    <img src="https://i.imgur.com/QoGWuzm.jpeg"   
+         alt="Image 3"   
+         class="image-placeholder"> 
+    <img src="https://i.imgur.com/rwPONnV.jpeg"   
+         alt="Image 4"   
+         class="image-placeholder"> 
+</div>    
+        </div>  
+    </div>  
+    <div class="week-content" id="week-5" style="display: none;">  
+        <div class="container">  
+            <style>  
+.week-title {  
+    text-align: center;  
+    color: #7c5c3e;  /* Warm brown color */  
+    font-size: 36px;  
+    margin: 30px 0;  
+    font-weight: bold;  
+    padding-bottom: 15px;  
+    border-bottom: 2px solid #e7d3c2;  
+    width: fit-content;  
+    margin-left: auto;  
+    margin-right: auto;  
+}  
+</style>  
+           <h1 class="week-title">Week 5: Red Lentils</h1>  
+             <!-- Embedded PowerPoint presentation -->  
+    <div class="slides-placeholder" style="padding:0; border:none; background:none;">  
+    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRPP6FMckP_fAP_zbeL8fCf__c3n0-5gMk90QuUG2rBigaXIakp0zrxdNcDWi0pYg/pubembed?start=false&loop=true&delayms=3000" frameborder="0" width="480" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>  
+    <style>  
+    .images-row {  
+        display: flex;  
+        justify-content: center;  
+        gap: 30px;  
+        padding: 20px;  
+        flex-wrap: wrap;  
+    }  
+      
+    .image-placeholder {  
+        width: 400px;  /* Increased from default size */  
+        height: auto;  /* Maintains aspect ratio */  
+        border-radius: 10px;  /* Rounded corners */  
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* Subtle shadow */  
+        transition: transform 0.3s ease;  /* Smooth hover effect */  
+    }  
+      
+    .image-placeholder:hover {  
+        transform: scale(1.05);  /* Slight zoom on hover */  
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);  
+    }  
+</style>  
+  
+<div class="images-row">  
+    <img src="https://i.imgur.com/gnEBeYH.jpeg"   
+         alt="Image 1"   
+         class="image-placeholder">  
+    <img src="https://i.imgur.com/VO3rIOJ.jpeg"   
+         alt="Image 2"   
+         class="image-placeholder">  
+    <img src="https://i.imgur.com/h4fnE0o.jpeg"   
+         alt="Image 3"   
+         class="image-placeholder"> 
+    <img src="https://i.imgur.com/9I2Kveo.jpeg"   
+         alt="Image 4"   
+         class="image-placeholder"> 
+</div>    
+        </div>  
+    </div>  
+    </div>  
+    <div class="week-content" id="week-6" style="display: none;">  
+      <!-- Embedded PowerPoint presentation --> 
+         <style>    
+    .week-title {    
+        text-align: center;    
+        color: #7c5c3e;  /* Warm brown color */    
+        font-size: 36px;    
+        margin: 30px 0;    
+        font-weight: bold;    
+        padding-bottom: 15px;    
+        border-bottom: 2px solid #e7d3c2;    
+        width: fit-content;    
+        margin-left: auto;    
+        margin-right: auto;    
+    }    
+</style>    
+  
+<!-- In your content section -->  
+<h1 class="week-title">Week 6: Kidney Beans</h1> 
+    <div class="slides-placeholder" style="padding:0; border:none; background:none;">  
+   <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRwgrPy4-TSHNcKmC8t3RIjih2hf0KVGEPRjVEzg4agKQWIOnGxpWAEVRXJD7mz2w/pubembed?start=false&loop=true&delayms=3000" frameborder="0" width="640" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>  
+    <style>  
+    .images-row {  
+        display: flex;  
+        justify-content: center;  
+        gap: 30px;  
+        padding: 20px;  
+        flex-wrap: wrap;  
+    }  
+      
+    .image-placeholder {  
+        width: 400px;  /* Increased from default size */  
+        height: auto;  /* Maintains aspect ratio */  
+        border-radius: 10px;  /* Rounded corners */  
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* Subtle shadow */  
+        transition: transform 0.3s ease;  /* Smooth hover effect */  
+    }  
+      
+    .image-placeholder:hover {  
+        transform: scale(1.05);  /* Slight zoom on hover */  
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);  
+    }  
+</style>  
+  
+<div class="images-row">  
+    <img src="https://i.imgur.com/2PsEgeP.jpeg"   
+         alt="Image 1"   
+         class="image-placeholder">  
+    <img src="https://i.imgur.com/UWrCowZ.jpeg"   
+         alt="Image 2"   
+         class="image-placeholder">  
+    <img src="https://i.imgur.com/X9ftxwq.jpeg"   
+         alt="Image 3"   
+         class="image-placeholder"> 
+    <img src="https://i.imgur.com/V1a6OFw.jpeg7"   
+         alt="Image 4"   
+         class="image-placeholder"> 
+</div>    
+        </div> 
+        <!-- About Section -->  
+<div id="week-about" class="week-content" style="display: none;">  
+    <div class="container">  
+        <h1 style="text-align: center; color: #003366; margin-bottom: 30px; border-bottom: 3px solid #CC0033; padding-bottom: 15px;">  
+            Pulses: Effects Of Increasing Pulse Consumption On Cardiovascular Disease Risk Factors  
+        </h1>  
+  
+        <!-- Study Purpose -->  
+        <div style="border: 3px solid #003366; padding: 20px; margin-bottom: 30px; border-radius: 8px;">  
+            <h2 style="color: #CC0033;">Study Purpose</h2>  
+            <p>The purpose of this USDA funded trial is to assess the effects of consuming two doses of pulses (1.5 cups/wk and 3 cups/wk) on:</p>  
+            <ul>  
+                <li>CVD risk factors (blood lipids, blood pressure, and HbA1c)</li>  
+                <li>Measure changes in overall diet quality</li>  
+                <li>Determine if pulse consumption alters self-reported satisfaction with life and food in adults</li>  
+            </ul>  
+             
+<div class="images-row" style="margin: 20px 0; display: flex; gap: 20px; justify-content: center;">  
+    <img src="https://i.imgur.com/Z4mLbus.png" alt="Public Health 1" style="width: 500px; height: 300px; object-fit: cover; border: 8px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px;">  
+    <img src="https://i.imgur.com/Gnfv6Ng.png" alt="Public Health 2" style="width: 300px; height: 300px; object-fit: cover; border: 8px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px;">  
+</div>  
+  
+        <!-- Public Health Context -->  
+        <div style="border: 3px solid #CC0033; padding: 20px; margin-bottom: 30px; border-radius: 8px;">  
+            <h2 style="color: #003366;">Public Health Context</h2>  
+            <ul>  
+                <li>60% of U.S. adults live with at least one chronic disease, and 40% have two or more diet-related chronic conditions</li>  
+                <li>Current dietary patterns contribute significantly to this health burden</li>  
+            </ul>  
+        <div class="images-row" style="margin: 20px 0; display: flex; gap: 20px; justify-content: center;">  
+    <img src="https://static.everspring-kent.production.k2.m1.brightspot.cloud/dims4/default/ff1f642/2147483647/strip/true/crop/1240x500+0+0/resize/1240x500!/quality/90/?url=https%3A%2F%2Fk2-prod-everspring-kent.s3.us-east-1.amazonaws.com%2Fbrightspot%2F80%2Fdf%2F3a9711484ffea598c192a3a029e8%2Fadobestock-333182397-620x250.webp" alt="Public Health 1" style="width: 600px; height: 300px; object-fit: cover; border: 8px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px;">  
+   
+</div>  
+  
+        <!-- Pulses as a Nutritional Intervention -->  
+        <div style="border: 3px solid #003366; padding: 20px; margin-bottom: 30px; border-radius: 8px;">  
+            <h2 style="color: #CC0033;">Pulses as a Nutritional Intervention</h2>  
+            <ul>  
+                <li>Pulses (beans, peas, lentils, chickpeas) are nutrient-dense foods featured in many healthy dietary patterns</li>  
+                <li>Key nutritional characteristics: high fiber, low glycemic index, high protein, low fat, and rich in bioactive compounds</li>  
+                <li>Current Dietary Guidelines for Americans (DGA) recommend 1.5 cup-equivalents of pulses per week</li>  
+                <li>Evidence suggests increasing to 3 cup-equivalents weekly may provide additional health benefits</li>  
+            </ul>  
+            <div class="images-row" style="margin: 20px 0; display: flex; gap: 20px; justify-content: center;">  
+                <img src="https://i0.wp.com/nmrdn.com/wp-content/uploads/2020/07/AdobeStock_117825265-L.jpeg?fit=1000%2C666&ssl=1" alt="Nutritional Intervention 1" style="width: 150px; height: 150px; object-fit: cover; border: 8px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px;">  
+                <img src="https://media.istockphoto.com/id/1301675046/photo/variety-kinds-of-natural-cereal-and-grain-seed-in-sack-and-dark-tone-for-clean-food-raw.jpg?s=612x612&w=0&k=20&c=99rJqzUdDPHr0N7USGYrxnAN3RRXaXQrkJbxcM4v8-w=" alt="Nutritional Intervention 2" style="width: 150px; height: 150px; object-fit: cover; border: 8px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px;">  
+            </div>  
+        </div>  
+  
+        <!-- Research Gap -->  
+        <div style="border: 3px solid #CC0033; padding: 20px; margin-bottom: 30px; border-radius: 8px;">  
+            <h2 style="color: #003366;">Research Gap</h2>  
+            <ul>  
+                <li>While studies show regular pulse consumption can reduce cardiovascular disease (CVD) risk factors, the optimal intake amount remains unclear</li>  
+                <li>This study aims to determine if there is justification to increase the DGA recommendation for pulses</li>  
+            </ul>  
+            <div class="images-row" style="margin: 20px 0; display: flex; gap: 20px; justify-content: center;">  
+    <img src="https://i.imgur.com/UVxw3KZ.png" alt="Public Health 1" style="width: 300px; height: 300px; object-fit: cover; border: 8px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px;">  
+   
+</div>  
+        </div>  
+    </div>     
+    </div> 
+    </div>     
+    </div>  
+    <!-- About the Researchers Section -->  
+<div id="week-researchers" class="week-content" style="display: none;">  
+    <div class="container">  
+        <div id="about-researchers" style="max-width: 900px; margin: 0 auto; background: #fff8f1; border-radius: 16px; padding: 40px;">  
+            <h2 style="text-align: center; color: #003366; font-size: 2rem; margin-bottom: 30px;">Nutritional Sciences and Wellness</h2>  
+            <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">  
+                <!-- Researcher 1 -->  
+                <div style="flex: 1 1 250px; min-width: 220px; max-width: 300px; background: #f5e6da; border-radius: 10px; padding: 20px; text-align: center;">  
+                    <h3 style="color: #CC0033; margin: 10px 0 6px 0;">Dr. Ken Wilund</h3>  
+                    <p style="font-weight: bold; color: #7c5c3e; margin: 0 0 10px 0;">Principal Investigator</p>  
+                    <p style="font-size: 1rem; color: #7c5c3e;">Dr. Wilund leads the Pulses Clinical Trial and specializes.......</p>  
+                    <img src="https://snsw.arizona.edu/sites/snsw.arizona.edu/files/styles/az_medium/public/media/photos/Ken_Wilund.jpg.webp?itok=y9dvuQFA" alt="Nutritional Intervention 2" style="width: 150px; height: 150px; object-fit: cover; border: 8px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px;">  
+                </div>  
+                <!-- Researcher 2 -->  
+                <div style="flex: 1 1 250px; min-width: 220px; max-width: 300px; background: #f5e6da; border-radius: 10px; padding: 20px; text-align: center;">  
+                    <h3 style="color: #CC0033; margin: 10px 0 6px 0;">Liz Sparks</h3>  
+                    <p style="font-weight: bold; color: #7c5c3e; margin: 0 0 10px 0;">Co-Investigator</p>  
+                    <p style="font-size: 1rem; color: #7c5c3e;">As a 4-H Agent in Pima County Elizabeth oversees the programmatic efforts of Tucson Village Farm, 4-H High Ropes Course, 4-H Field Science, 4-H High Adventure programs.</p>  
+                    <img src="https://kmap.arizona.edu/_next/image?url=%2Fapi%2Fuser%2Fphoto%2Fesparks&w=256&q=75" alt="Nutritional Intervention 2" style="width: 150px; height: 150px; object-fit: cover; border: 8px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px;">  
+                </div>  
+                <!-- Researcher 3 -->  
+                <div style="flex: 1 1 250px; min-width: 220px; max-width: 300px; background: #f5e6da; border-radius: 10px; padding: 20px; text-align: center;">  
+                    <h3 style="color: #CC0033; margin: 10px 0 6px 0;">Kimmy Ceus</h3>  
+                    <p style="font-weight: bold; color: #7c5c3e; margin: 0 0 10px 0;">Research Coordinator</p>  
+                    <p style="font-size: 1rem; color: #7c5c3e;">Kimberly Ceus is a PhD student in Nutritional Sciences and Wellness with a focus on metabolic research and molecular nutrition. She leads the pulses study, coordinating participant recruitment, scheduling, and communication. As the main point of contact for participants, she ensures smooth study operations while supporting the research team with her clinical and coaching background.</p>  
+                <img src="https://i.imgur.com/YNPMped.jpeg" alt="Nutritional Intervention 2" style="width: 150px; height: 150px; object-fit: cover; border: 8px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px;">  
+                </div> 
+                <!-- Researcher 4 -->  
+                <div style="flex: 1 1 250px; min-width: 220px; max-width: 300px; background: #f5e6da; border-radius: 10px; padding: 20px; text-align: center;">  
+                    <h3 style="color: #CC0033; margin: 10px 0 6px 0;">Milad Hasankhani</h3>  
+                    <p style="font-weight: bold; color: #7c5c3e; margin: 0 0 10px 0;">Researcher</p>  
+                    <p style="font-size: 1rem; color: #7c5c3e;">Milad specializes in ....</p>  
+                 <img src="data:image/jpeg;base64,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" alt="Nutritional Intervention 2" style="width: 150px; height: 150px; object-fit: cover; border: 8px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px;">
+                </div>
+                 <h2 style="text-align: center; color: #003366; font-size: 2rem; margin-bottom: 30px;">Tucson Village Farm</h2>     
+            </div>  
+           <div style="display: flex; gap: 24px; flex-wrap: wrap; justify-content: center;">  
+    <!-- Researcher 5 -->  
+    <div style="flex: 1 1 250px; min-width: 220px; max-width: 300px; background: #f5e6da; border-radius: 10px; padding: 20px; text-align: center;">  
+        <h3 style="color: #CC0033; margin: 10px 0 6px 0;">Carey Cunningham-Scott</h3>  
+        <p style="font-weight: bold; color: #7c5c3e; margin: 0 0 10px 0;">Chef</p>  
+        <p style="font-size: 1rem; color: #7c5c3e;">Carey.....</p>  
+        <img src="https://tucsonvillagefarm.arizona.edu/sites/tucsonvillagefarm.cals.arizona.edu/files/styles/az_card_image/public/2022-12/DSC00284.JPG.webp?itok=YoXLDNdr" alt="Nutritional Intervention 2" style="width: 150px; height: 150px; object-fit: cover; border: 8px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px;">  
+    </div>  
+    <!-- Researcher 6  -->  
+    <div style="flex: 1 1 250px; min-width: 220px; max-width: 300px; background: #f5e6da; border-radius: 10px; padding: 20px; text-align: center;">  
+        <h3 style="color: #CC0033; margin: 10px 0 6px 0;">Becky Yim</h3>  
+        <p style="font-weight: bold; color: #7c5c3e; margin: 0 0 10px 0;">Chef</p>  
+        <p style="font-size: 1rem; color: #7c5c3e;">Becky.....</p>  
+        <img src="https://tucsonvillagefarm.arizona.edu/sites/tucsonvillagefarm.cals.arizona.edu/files/styles/az_card_image/public/2022-12/DSC00284.JPG.webp?itok=YoXLDNdr" alt="Nutritional Intervention 2" style="width: 150px; height: 150px; object-fit: cover; border: 8px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px;">  
+    </div>  
+</div>  
+        </div>  
+    </div>  
+</div>  
+  
+    <!-- JavaScript for Navigation -->  
+   <script>  
+    // Get all navigation links and week content sections  
+    const links = document.querySelectorAll('.nav-link');  
+    const weekContents = document.querySelectorAll('.week-content');  
+  
+    // Function to show the selected week and update navigation  
+    function showWeek(weekNum) {  
+        weekContents.forEach(function(div) {  
+            div.style.display = 'none';  
+        });  
+        // Handle both numeric weeks and the "about" section  
+        const targetId = isNaN(weekNum) ? 'week-' + weekNum : 'week-' + weekNum;  
+        document.getElementById(targetId).style.display = 'block';  
+        links.forEach(function(link) {  
+            link.classList.remove('active');  
+            if (link.getAttribute('data-week') == weekNum) {  
+                link.classList.add('active');  
+            }  
+        });  
+    }  
+  
+    // Add click event listeners to navigation links  
+    links.forEach(function(link) {  
+        link.addEventListener('click', function(e) {  
+            e.preventDefault();  
+            showWeek(this.getAttribute('data-week'));  
+        });  
+    });  
+  
+    // Show week 1 by default on page load  
+    showWeek(1);  
+    function showWeek(weekNum) {  
+    weekContents.forEach(function(div) {  
+        div.style.display = 'none';  
+    });  
+    document.getElementById('week-' + weekNum).style.display = 'block';  
+    links.forEach(function(link) {  
+        link.classList.remove('active');  
+        if (link.getAttribute('data-week') == weekNum) {  
+            link.classList.add('active');  
+        }  
+    });  
+}  
+</script>  
+</body>  
+</html
